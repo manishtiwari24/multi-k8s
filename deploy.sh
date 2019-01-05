@@ -1,6 +1,6 @@
-docker build -t mtiwari24/multi-client:latest -t mtiwari24/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t mtiwari24/multi-server:latest -t mtiwari24/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t mtiwari24/multi-worker:latest -t mtiwari24/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t mtiwari24/multi-client:latest -t mtiwari24/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t mtiwari24/multi-server:latest -t mtiwari24/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t mtiwari24/multi-worker:latest -t mtiwari24/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push mtiwari24/multi-client:latest
 docker push mtiwari24/multi-server:latest
