@@ -3,22 +3,8 @@ services:
   - docker
 before_install:
   - openssl aes-256-cbc -K $encrypted_0c35eebf403c_key -iv $encrypted_0c35eebf403c_iv -in service-account.json.enc -out service-account.json -d
-<<<<<<< HEAD
-  - curl -sSL https://sdk.cloud.google.com > /tmp/gcl && bash /tmp/gcl --install-dir=~/gcloud --disable-prompts
-<<<<<<< HEAD
-<<<<<<< HEAD
-  - source $HOME/gcloud/google-clould-sdk/completion.bash.inc
-=======
->>>>>>> parent of 322ea90... Update .travis.yml
-  - source $HOME/gcloud/google-clould-sdk/path.bash.inc
-=======
-  - source /home/travis/gcloud/google-clould-sdk/completion.bash.inc
-  - source /home/travis/gcloud/google-clould-sdk/path.bash.inc
->>>>>>> parent of 338a025... Update travis yaml to correct typo
-=======
   - curl https://sdk.cloud.google.com | bash > /dev/null ;
-  - source $HOME/google-clould-sdk/path.bash.inc
->>>>>>> parent of 6af7b3d... Changes to the command to install google sdk
+  - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project multi-k8s-227700
